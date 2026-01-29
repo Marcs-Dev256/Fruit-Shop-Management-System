@@ -15,7 +15,8 @@ class FruitShopMS extends StatelessWidget {
       title: 'Fruit Shop MS',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.green,
+         useMaterial3: true,
+  colorSchemeSeed: Colors.blue,
       ),
       initialRoute: '/login', // start at login page
       routes: {
