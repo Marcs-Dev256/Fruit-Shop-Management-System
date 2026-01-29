@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_shop_ms/screens/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -29,9 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
 
           // 🔹 Green overlay
-          Container(
-            color: Colors.green.withOpacity(0.75),
-          ),
+          Container(color: Colors.green.withOpacity(0.75)),
 
           // 🔹 Login content
           Center(
@@ -42,6 +41,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   const SizedBox(height: 40),
 
+                  Center(
+                    child: const Text(
+                      'Fruit POS App',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 50,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(height: 50),
                   const Text(
                     'Login',
                     style: TextStyle(
@@ -130,10 +141,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     width: double.infinity,
                     height: 50,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomeScreen(),
+                          ),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            Colors.tealAccent.withOpacity(0.8),
+                        backgroundColor: Colors.tealAccent.withOpacity(0.8),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),
